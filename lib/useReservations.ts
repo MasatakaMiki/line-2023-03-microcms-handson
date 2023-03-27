@@ -1,3 +1,4 @@
+import { MicroCMSClient } from 'microcms-js-sdk';
 import { Staff } from './useStaff'
 export interface Reservation {
   id: string;
@@ -21,7 +22,6 @@ export const createReservation = (microcmsClient, reservation: Reservation, staf
     success()
   })
   .catch((err) => console.error(err));
-
   return reservation;
 }
 
